@@ -1,4 +1,5 @@
 package tw.brad.apps.brad41;
+//目的:傳統藍芽2:https://developer.android.com/guide/topics/connectivity/bluetooth#ConnectAsAClient
 //藍芽用在短距離大約70公尺,還有更短的式NFC公車刷悠遊卡
 //RFID:NFC延伸出來用於工廠上面,東西一拿出倉庫馬上被顯示出貨
 //Beacon:近距離路過某個店家,突然收到他的訊息,針策擬以靠近的範圍去發送訊息,屬於室內定位,空間的三點可以偵測你的位置
@@ -14,6 +15,8 @@ package tw.brad.apps.brad41;
 //<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>存取精確位置
 //<uses-permission android:name="android.permission.BLUETOOTH"/>藍芽權限
 //<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+//藍芽4觀念:你的腳色是固定,一般手機式控制中心(Centra) 周邊工具(peripheral)
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
