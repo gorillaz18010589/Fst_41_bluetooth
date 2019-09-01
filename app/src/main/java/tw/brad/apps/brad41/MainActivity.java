@@ -190,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);  //被搜尋回應
         discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
         startActivity(discoverableIntent);//啟動被搜尋藍雅的intent
+        Log.v("brad","藍芽被搜尋中啟動");
     }
 
 
@@ -238,12 +239,12 @@ public class MainActivity extends AppCompatActivity {
             try {
                 // Connect to the remote device through the socket. This call blocks
                 // until it succeeds or throws an exception.
-                mmSocket.connect();
+                mmSocket.connect(); //藍雅連線成功
                 Log.v("brad", "connect OK");
             } catch (IOException connectException) {
                 // Unable to connect; close the socket and return.
                 try {
-                    mmSocket.close();
+                    mmSocket.close();//藍芽關閉
                 } catch (IOException closeException) {
                     Log.v("brad", "Could not close the client socket", closeException);
                 }
@@ -287,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
             // Keep listening until exception occurs or a socket is returned.
             while (true) {
                 try {
-                    socket = mmServerSocket.accept();
+                    socket = mmServerSocket.accept(); //藍芽被接收中
                 } catch (IOException e) {
                     Log.v("brad", "Socket's accept() method failed", e);
                     break;
